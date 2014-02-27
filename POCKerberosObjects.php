@@ -60,7 +60,7 @@ echo "</pre>";
 
 
 // ok now with objects.  This emulates the initial creation of a principal.
-	require_once("KerberosUsers.php");
+	require_once("User.php");
 	$newEmail		= "JamesJamesonJr@email.com";
 	$newNonce		= null;				// null is an excepted value for nonce
 	$newUserId	= 372021;

@@ -1,6 +1,6 @@
 <?php
 
-class KerberosUsers
+class User
 
 {
 	// state variables
@@ -100,6 +100,30 @@ class KerberosUsers
 	}
 	// nonce handling
 	
+	/* this method must recieve an input from the confirmation process which will create a 
+	 * users object and fire a verify-nonce method.  The nonce is sent through $_POST data and matched
+	 * in this method, if it matches the nonce which is obtained from the data-row the user's data-row
+	 * is updated with the nonce being null.
+	 * intput: string nonce from registration link
+	 * output: none
+	 * throws: $registrationNonce not a string, hex, and of the appropriate length (regex), failed to match */
+	/*public function matchNonce($registrationNonce)
+	{
+		$p = "/^[0-9a-fA-F]{64}$/";
+		if(preg_match($registrationNonce, $p) !== 1)
+		{
+			throw new Exception("Invalid registration type.");
+		}
+		elseif($this->getNonce() !== $registrationNonce)
+		{
+			throw new Exception("Invalid registration details.");
+		}
+		else
+		{
+			// update user row with a null nonce
+		}
+	}
+	*/
 	// string
 
 
